@@ -30,6 +30,12 @@ func (r *Resolver) Tag() *string {
 func (r *Resolver) Link() string {
 	return r.Subscription.Link
 }
+func (r *Resolver) CronExp() string {
+	return r.Subscription.CronExp
+}
+func (r *Resolver) CronEnable() bool {
+	return r.Subscription.CronEnable
+}
 func (r *Resolver) Status() string {
 	return r.Subscription.Status
 }

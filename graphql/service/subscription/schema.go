@@ -12,6 +12,8 @@ type Subscription {
 	updatedAt: Time!
 	tag: String
 	link: String!
+	cronExp: String!
+	cronEnable: Boolean!
 	status: String!
 	info: String!
 	nodes(first: Int, after: ID): NodesConnection!

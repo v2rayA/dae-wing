@@ -19,3 +19,5 @@ go-mod/
 
 # log
 *.log
+
+__debug_bin*

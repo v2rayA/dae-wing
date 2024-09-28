@@ -15,11 +15,13 @@ var (
 )
 
 type Subscription struct {
-	ID        uint      `gorm:"primaryKey;autoIncrement"`
-	UpdatedAt time.Time `gorm:"not null"`
-	Link      string    `gorm:"not null"`
-	Status    string    `gorm:"not null"` // Latency, error info, etc.
-	Info      string    `gorm:"not null"` // Maybe include some info from provider
+	ID         uint      `gorm:"primaryKey;autoIncrement"`
+	UpdatedAt  time.Time `gorm:"not null"`
+	Link       string    `gorm:"not null"`
+	CronExp    string    `gorm:"default:10 */6 * * *"`
+	CronEnable bool      `gorm:"default:true"`
+	Status     string    `gorm:"not null"` // Latency, error info, etc.
+	Info       string    `gorm:"not null"` // Maybe include some info from provider
 
 	Tag *string `gorm:"unique"`
 
